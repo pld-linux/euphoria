@@ -11,8 +11,10 @@ Source0:	ftp://ftp.sparky.homelinux.org/snaps/enli/e17/apps/%{name}-%{_snap}.tar
 URL:		http://enlightenment.org/
 BuildRequires:	edje-devel
 BuildRequires:	rake
-BuildRequires:	ruby-EFL
-Requires:	esmart
+BuildRequires:	ruby-ecore
+BuildRequires:	ruby-edje
+BuildRequires:	ruby-esmart
+BuildRequires:	ruby-evas
 Requires:	xmms2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
