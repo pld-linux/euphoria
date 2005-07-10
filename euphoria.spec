@@ -15,6 +15,7 @@ BuildRequires:	ruby-ecore
 BuildRequires:	ruby-edje
 BuildRequires:	ruby-esmart
 BuildRequires:	ruby-evas
+Requires:	ruby-xmmsclient
 Requires:	xmms2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
