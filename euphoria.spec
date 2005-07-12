@@ -1,4 +1,5 @@
-Summary:	EFL media player written in ruby
+Summary:	EFL media player written in Ruby
+Summary(pl):	Odtwarzacz multimedialny oparty o EFL napisany Rubym
 Name:		euphoria
 Version:	0.8.0
 %define	_snap	20050708
@@ -23,7 +24,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define	_rubylibdir	%(ruby -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
 
 %description
-EFL media player written in ruby.
+EFL media player written in Ruby.
+
+%description -l pl
+Odtwarzacz multimedialny oparty o EFL napisany Rubym.
 
 %prep
 %setup -q -n %{name}
