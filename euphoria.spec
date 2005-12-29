@@ -11,12 +11,15 @@ Source0:	http://sparky.homelinux.org/snaps/enli/e17/apps/%{name}-%{_snap}.tar.gz
 # Source0-md5:	479e7046b4cbd20305ec8009c27b6d65
 URL:		http://enlightenment.org/
 BuildRequires:	edje
+BuildRequires:	rpmbuild(macros) >= 1.277
+BuildRequires:	ruby-modules
 BuildRequires:	rake
 BuildRequires:	sed >= 4.0
 Requires:	ruby-ecore
 Requires:	ruby-edje
 Requires:	ruby-esmart
 Requires:	ruby-evas
+%ruby_mod_ver_requires_eq
 Requires:	xmms2-client-lib-ecore-ruby
 Requires:	xmms2-client-lib-ruby
 BuildArch:	noarch
