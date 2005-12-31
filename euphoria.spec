@@ -19,7 +19,7 @@ Requires:	ruby-ecore
 Requires:	ruby-edje
 Requires:	ruby-esmart
 Requires:	ruby-evas
-%ruby_mod_ver_requires_eq
+%{?ruby_mod_ver_requires_eq}
 Requires:	xmms2-client-lib-ecore-ruby
 Requires:	xmms2-client-lib-ruby
 BuildArch:	noarch
