@@ -1,5 +1,5 @@
 Summary:	EFL media player written in Ruby
-Summary(pl):	Odtwarzacz multimedialny oparty o EFL napisany Rubym
+Summary(pl.UTF-8):   Odtwarzacz multimedialny oparty o EFL napisany Rubym
 Name:		euphoria
 Version:	0.8.0
 %define	_snap	20050717
@@ -30,7 +30,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 EFL media player written in Ruby.
 
-%description -l pl
+%description -l pl.UTF-8
 Odtwarzacz multimedialny oparty o EFL napisany Rubym.
 
 %prep
