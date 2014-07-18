@@ -1,8 +1,8 @@
+%define	_snap	20050717
 Summary:	EFL media player written in Ruby
 Summary(pl.UTF-8):	Odtwarzacz multimedialny oparty o EFL napisany Rubym
 Name:		euphoria
 Version:	0.8.0
-%define	_snap	20050717
 Release:	0.%{_snap}.0.1
 License:	BSD
 Group:		X11/Applications
@@ -13,19 +13,16 @@ URL:		http://enlightenment.org/
 BuildRequires:	edje
 BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
-BuildRequires:	rake
+BuildRequires:	ruby-rake
 BuildRequires:	sed >= 4.0
 Requires:	ruby-ecore
 Requires:	ruby-edje
 Requires:	ruby-esmart
 Requires:	ruby-evas
-%{?ruby_mod_ver_requires_eq}
 Requires:	xmms2-client-lib-ecore-ruby
 Requires:	xmms2-client-lib-ruby
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define	_rubylibdir	%(ruby -r rbconfig -e 'print Config::CONFIG["sitelibdir"]')
 
 %description
 EFL media player written in Ruby.
@@ -45,10 +42,9 @@ rake
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-DESTDIR=$RPM_BUILD_ROOT
-PREFIX=%{_usr}
-RUBYLIBDIR=%{_rubylibdir}
-export DESTDIR PREFIX RUBYLIBDIR
+PREFIX=%{_usr} \
+RUBYLIBDIR=%{ruby_sitelibdir} \
+DESTDIR=$RPM_BUILD_ROOT \
 rake install
 
 %clean
@@ -59,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog COPYING README TODO
 %attr(755,root,root) %{_bindir}/%{name}
 %{_datadir}/%{name}
-%{_rubylibdir}/%{name}
+%{ruby_sitelibdir}/%{name}
